@@ -32,7 +32,7 @@
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--creme);color:var(--escuro);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.015em;margin:0;text-wrap:balance}
 h2{font-size:clamp(34px,5vw,60px)}
@@ -51,7 +51,7 @@ p{margin:0 0 1em;text-wrap:pretty}
 .azul h2 em,.escuro h2 em{color:var(--cobre-claro)}
 
 /* botões */
-.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:600 15px/1 var(--sans);letter-spacing:.02em;text-decoration:none;transition:background-color .2s,color .2s,border-color .2s}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:3px;font:600 15px/1 var(--sans);letter-spacing:.02em;text-decoration:none;transition:background-color .2s,color .2s,border-color .2s}
 .btn-cobre{background:var(--cobre);color:#fff}
 .btn-cobre:hover{background:#94634a}
 .btn-linha{border:1px solid currentColor;color:inherit}
@@ -68,36 +68,40 @@ p{margin:0 0 1em;text-wrap:pretty}
 .nav a:hover{opacity:1}
 .topo .btn{min-height:42px;padding:0 18px;font-size:14px}
 .menu{display:none;position:relative}
-.menu summary{list-style:none;cursor:pointer;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--linha-clara);border-radius:999px}
+.menu summary{list-style:none;cursor:pointer;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--linha-clara);border-radius:3px}
 .menu summary::-webkit-details-marker{display:none}
 .menu summary span,.menu summary span::before,.menu summary span::after{display:block;width:18px;height:1.5px;background:var(--bege);position:relative}
 .menu summary span::before,.menu summary span::after{content:"";position:absolute;left:0}
 .menu summary span::before{top:-6px}.menu summary span::after{top:6px}
-.menu nav{position:absolute;right:0;top:54px;background:var(--escuro-2);border:1px solid var(--linha-clara);border-radius:14px;padding:10px;display:flex;flex-direction:column;min-width:220px}
+.menu nav{position:absolute;right:0;top:54px;background:var(--escuro-2);border:1px solid var(--linha-clara);padding:10px;display:flex;flex-direction:column;min-width:220px;border-radius:4px}
 .menu nav a{padding:12px 14px;text-decoration:none;border-radius:8px}
 .menu nav a:hover{background:rgba(242,230,216,.08)}
 @media (max-width:980px){.nav{display:none}.menu{display:block}.topo .btn span{display:none}.topo .btn{width:44px;padding:0;justify-content:center}}
 
 /* hero */
-.hero{position:relative;overflow:hidden;padding:clamp(56px,8vw,110px) 0 0}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:end}
-.hero h1{font-size:clamp(46px,7.4vw,104px);line-height:1.02}
-.hero .lead{margin:28px 0 36px}
-.hero-acoes{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:clamp(48px,7vw,96px)}
-.hero-foto{align-self:end;position:relative;max-width:520px;justify-self:end;width:100%}
-.hero-foto{margin-bottom:clamp(48px,7vw,96px)}
-.hero-foto img{width:100%;height:auto;max-height:720px;object-fit:cover;object-position:50% 0;border-radius:999px 999px 20px 20px}
-.credencial{position:absolute;left:-28px;bottom:36px;background:rgba(28,27,24,.86);border:1px solid var(--linha-clara);border-radius:14px;padding:16px 20px;font-size:13px;line-height:1.5;backdrop-filter:blur(6px)}
-.credencial strong{display:block;font:italic 400 19px/1.2 var(--serif);margin-bottom:4px}
-.hero-rodape{border-top:1px solid var(--linha-clara);position:relative}
-.hero-rodape .wrap{display:flex;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(242,230,216,.7)}
+.hero{position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:calc(100svh - 68px)}
+.hero-foto{position:absolute;top:0;right:0;bottom:0;width:54%;margin:0}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 32%),linear-gradient(0deg,transparent 0,#000 18%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 32%),linear-gradient(0deg,transparent 0,#000 18%);mask-composite:intersect}
+.hero-texto{position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;width:100%;padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(48px,6vw,80px)}
+.hero-texto>*{max-width:min(620px,50%)}
+.hero h1{font-size:clamp(46px,6.6vw,96px);line-height:1.02;max-width:none}
+.hero-nome{margin:26px 0 0;font-size:14px;line-height:1.5;color:rgba(242,230,216,.7);letter-spacing:.01em}
+.hero-nome strong{color:var(--bege);font-weight:600}
+.hero .lead{margin:20px 0 34px}
+.hero-acoes{display:flex;flex-wrap:wrap;gap:12px}
+.hero-rodape{border-top:1px solid var(--linha-clara);position:relative;background:rgba(28,27,24,.55)}
+.hero-rodape .wrap{display:flex;justify-content:space-between;gap:20px;padding-top:20px;padding-bottom:20px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(242,230,216,.7)}
 @media (max-width:860px){
-  .hero .wrap{grid-template-columns:1fr}
-  .hero-acoes{margin-bottom:8px}
-  .hero-foto{justify-self:center;max-width:440px;margin-top:24px}
-  .hero-foto img{max-height:560px}
-  .credencial{left:12px;bottom:20px}
-  .hero-rodape .wrap{flex-direction:column;gap:8px}
+  .hero{min-height:0}
+  .hero-foto{position:relative;width:100%;height:min(74svh,640px)}
+  .hero-foto img{object-position:50% 8%;-webkit-mask-image:linear-gradient(0deg,transparent 0,rgba(0,0,0,.35) 18%,#000 46%);mask-image:linear-gradient(0deg,transparent 0,rgba(0,0,0,.35) 18%,#000 46%)}
+  .hero-texto{margin-top:-190px;padding-top:0;padding-bottom:48px}
+  .hero-texto>*{max-width:none}
+  .hero h1{font-size:clamp(44px,12.5vw,64px)}
+  .hero .eyebrow{display:none}
+  .hero-nome{margin-top:18px;font-size:13px}
+  .hero-acoes .btn{flex:1;justify-content:center}
+  .hero-rodape{display:none}
 }
 
 /* números */
@@ -118,7 +122,7 @@ p{margin:0 0 1em;text-wrap:pretty}
 
 /* estrutura */
 .equip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
-.equip figure{margin:0;background:var(--bege);border-radius:16px;overflow:hidden;border:1px solid var(--linha)}
+.equip figure{margin:0;background:var(--bege);overflow:hidden;border:1px solid var(--linha)}
 .equip img{width:100%;height:auto;aspect-ratio:1;object-fit:contain;padding:16%;mix-blend-mode:multiply}
 .equip figcaption{padding:14px 18px 18px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--marrom);border-top:1px solid var(--linha)}
 @media (max-width:900px){.equip{grid-template-columns:repeat(2,1fr)}}
@@ -127,9 +131,9 @@ p{margin:0 0 1em;text-wrap:pretty}
 .casos{display:flex;flex-direction:column;margin-top:56px;border-top:1px solid var(--linha-clara)}
 .caso{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center;padding:32px 0;border-bottom:1px solid var(--linha-clara)}
 .par{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.par figure{margin:0;position:relative;border-radius:12px;overflow:hidden;background:#0d0d0c;aspect-ratio:4/3}
+.par figure{margin:0;position:relative;overflow:hidden;background:#0d0d0c;aspect-ratio:4/3}
 .par img{width:100%;height:100%;object-fit:contain}
-.tag{position:absolute;left:10px;top:10px;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:var(--escuro);color:var(--bege)}
+.tag{position:absolute;left:10px;top:10px;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 10px;border-radius:2px;background:var(--escuro);color:var(--bege)}
 .tag.depois{background:var(--cobre)}
 .caso h3{font-size:clamp(26px,2.8vw,36px);margin-bottom:10px}
 .caso p{color:rgba(242,230,216,.75);margin:0;max-width:36ch}
@@ -152,7 +156,7 @@ p{margin:0 0 1em;text-wrap:pretty}
 .clark h3{font:italic 400 clamp(26px,2.8vw,34px)/1.1 var(--serif);margin-bottom:12px}
 .clark p{color:rgba(242,230,216,.8);margin:0}
 .clark .fotos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.clark img{border-radius:10px;aspect-ratio:379/273;object-fit:cover;width:100%}
+.clark img{aspect-ratio:379/273;object-fit:cover;width:100%}
 @media (max-width:760px){.clark{grid-template-columns:1fr}}
 
 /* parceria */
@@ -162,18 +166,18 @@ p{margin:0 0 1em;text-wrap:pretty}
 .passos li::before{content:"0" counter(p);grid-row:span 2;font:italic 400 26px/1 var(--serif);color:var(--cobre)}
 .passos h3{font:600 13px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--escuro)}
 .passos p{margin:0;color:var(--marrom)}
-.foto-retrato{border-radius:999px 999px 18px 18px;overflow:hidden;position:sticky;top:96px}
+.foto-retrato{overflow:hidden;position:sticky;top:96px}
 .foto-retrato img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 15%}
 @media (max-width:900px){.foto-retrato{position:static;max-width:420px}.foto-retrato img{aspect-ratio:4/5}}
 
 /* encaminhar */
 .encaminhar{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px)}
 @media (max-width:900px){.encaminhar{grid-template-columns:1fr}}
-.checklist{list-style:none;margin:28px 0;padding:24px 26px;background:var(--bege);border-radius:16px;display:flex;flex-direction:column;gap:12px}
+.checklist{list-style:none;margin:28px 0;padding:24px 26px;background:var(--bege);display:flex;flex-direction:column;gap:12px}
 .checklist li{display:flex;gap:12px;align-items:flex-start}
 .checklist li::before{content:"";flex:none;width:18px;height:18px;margin-top:4px;border-radius:50%;background:var(--cobre) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
 .info{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 28px}
-.info div{border:1px solid var(--linha);border-radius:14px;padding:18px 20px}
+.info div{border:1px solid var(--linha);padding:18px 20px}
 .info b{display:block;font:400 30px/1.1 var(--serif);color:var(--cobre);margin-bottom:6px}
 .info span{font-size:14px;color:var(--marrom);line-height:1.45;display:block}
 .btn-escuro{background:var(--escuro);color:var(--bege)}
@@ -189,13 +193,13 @@ p{margin:0 0 1em;text-wrap:pretty}
 
 /* depoimentos */
 .depo{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:56px}
-.depo figure{margin:0;padding:clamp(26px,3vw,40px);border:1px solid var(--linha-clara);border-radius:18px;background:rgba(28,27,24,.45);display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.depo figure{margin:0;padding:clamp(26px,3vw,40px);border:1px solid var(--linha-clara);background:rgba(28,27,24,.45);display:flex;flex-direction:column;justify-content:space-between;gap:24px}
 .depo blockquote{margin:0;font:italic 400 clamp(18px,1.6vw,21px)/1.55 var(--serif)}
 .depo figcaption{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cobre-claro)}
 @media (max-width:760px){.depo{grid-template-columns:1fr}}
 
 /* sobre */
-.sobre-foto{border-radius:18px;overflow:hidden;margin-bottom:clamp(40px,6vw,72px)}
+.sobre-foto{overflow:hidden;margin-bottom:clamp(40px,6vw,72px)}
 .sobre-foto img{width:100%;aspect-ratio:16/7;object-fit:cover;object-position:50% 30%}
 @media (max-width:700px){.sobre-foto img{aspect-ratio:4/3}}
 .sobre-texto p{color:var(--marrom)}
@@ -210,12 +214,12 @@ p{margin:0 0 1em;text-wrap:pretty}
 .contato h2{font-size:clamp(42px,6vw,80px)}
 .contato .sub{font:italic 400 clamp(20px,2vw,26px)/1.4 var(--serif);color:var(--cobre-claro);margin:18px 0 24px}
 .canais{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px}
-.canal{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border:1px solid var(--linha-clara);border-radius:14px;text-decoration:none;transition:border-color .2s,background-color .2s}
+.canal{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border:1px solid var(--linha-clara);text-decoration:none;transition:border-color .2s,background-color .2s}
 a.canal:hover{border-color:var(--cobre-claro);background:rgba(242,230,216,.05)}
 .canal small{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cobre-claro)}
 .canal span{font-size:16px;overflow-wrap:anywhere}
 .canal.largo{grid-column:1/-1}
-.contato-foto{border-radius:18px;overflow:hidden}
+.contato-foto{overflow:hidden}
 .contato-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 12%}
 @media (max-width:900px){.contato .wrap{grid-template-columns:1fr}.contato-foto{order:-1;max-width:460px}.contato-foto img{aspect-ratio:1}}
 @media (max-width:520px){.canais{grid-template-columns:1fr}}
@@ -264,19 +268,17 @@ a.canal:hover{border-color:var(--cobre-claro);background:rgba(242,230,216,.05)}
 <main id="inicio">
 
 <section class="hero escuro">
-  <div class="wrap">
-    <div>
-      <p class="eyebrow">Endodelivery · Para clínicas parceiras</p>
-      <h1>Endodontia<br><em>especializada.</em><br>Na sua clínica.</h1>
-      <p class="lead">Excelência clínica e praticidade para dentistas que valorizam uma parceria de confiança. Eu vou até o seu consultório, com a estrutura completa, e o paciente continua sendo seu.</p>
-      <div class="hero-acoes">
-        <a class="btn btn-cobre" href="#contato">Quero ser parceiro</a>
-        <a class="btn btn-linha" href="#parceria">Como funciona</a>
-      </div>
-    </div>
-    <div class="hero-foto">
-      <img src="img/PJF_2780.webp" alt="Dr. Gabriel Germano, endodontista, de braços cruzados" width="934" height="1400" fetchpriority="high">
-      <div class="credencial"><strong>Dr. Gabriel Germano</strong>Especialista em Endodontia · FORP-USP<br>CRO-MG 62.727 · CRO-SP 148.553</div>
+  <div class="hero-foto">
+    <img src="img/PJF_2780.webp" alt="Dr. Gabriel Germano, endodontista, de braços cruzados" width="1067" height="1600" fetchpriority="high">
+  </div>
+  <div class="wrap hero-texto">
+    <p class="eyebrow">Endodelivery · Para clínicas parceiras</p>
+    <h1>Endodontia<br><em>especializada.</em><br>Na sua clínica.</h1>
+    <p class="hero-nome"><strong>Dr. Gabriel Germano</strong> · Especialista em Endodontia (FORP-USP) · CRO-MG 62.727 · CRO-SP 148.553</p>
+    <p class="lead">Excelência clínica e praticidade para dentistas que valorizam uma parceria de confiança. Eu vou até o seu consultório, com a estrutura completa, e o paciente continua sendo seu.</p>
+    <div class="hero-acoes">
+      <a class="btn btn-cobre" href="#contato">Quero ser parceiro</a>
+      <a class="btn btn-linha" href="#parceria">Como funciona</a>
     </div>
   </div>
   <div class="hero-rodape"><div class="wrap"><span>Endodontia ao seu alcance</span><span>Tecnologia, precisão e cuidado em cada tratamento</span></div></div>
