@@ -1,278 +1,549 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Dr. Gabriel Germano · Direções de identidade</title>
-<script src="./vendor/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script>
-<script src="./vendor/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
-<script src="./support.js"></script>
+<title>Dr. Gabriel Germano · Endodontia na sua clínica | Endodelivery</title>
+<meta name="description" content="Endodontista que atende dentro da clínica parceira, com equipamentos próprios: tratamentos, retratamentos, urgências e casos complexos. CRO-MG 62.727 · CRO-SP 148.553.">
+<link rel="canonical" href="https://paparidisbrancher.github.io/dr-gabriel-identidade/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Dr. Gabriel Germano · Endodontia especializada na sua clínica">
+<meta property="og:description" content="Endodelivery: o endodontista vai até a sua clínica, com equipamentos próprios e relatório de cada caso.">
+<meta property="og:url" content="https://paparidisbrancher.github.io/dr-gabriel-identidade/">
+<meta property="og:image" content="https://paparidisbrancher.github.io/dr-gabriel-identidade/img/og.jpg">
+<meta name="theme-color" content="#252420">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300..700&family=Lora:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dentist","name":"Dr. Gabriel Germano · Endodelivery","description":"Endodontia especializada atendendo em clínicas parceiras.","telephone":"+55 35 99846-2695","email":"gabrielgermanoendodontia@gmail.com","url":"https://paparidisbrancher.github.io/dr-gabriel-identidade/","image":"https://paparidisbrancher.github.io/dr-gabriel-identidade/img/og.jpg","address":{"@type":"PostalAddress","streetAddress":"Rua José Leonel Vilela, 67 – Centro","addressLocality":"Alpinópolis","addressRegion":"MG","addressCountry":"BR"},"sameAs":["https://www.instagram.com/drgabrielgermano/"]}
+</script>
+<style>
+:root{
+  --escuro:#252420;--escuro-2:#1c1b18;--bege:#F2E6D8;--creme:#faf6f0;--cobre:#A77253;--cobre-claro:#c08d6d;
+  --azul:#615F6D;--marrom:#5A4A3B;--linha:rgba(90,74,59,.22);--linha-clara:rgba(242,230,216,.18);
+  --serif:'Lora',Georgia,serif;--sans:'Host Grotesk',system-ui,sans-serif;
+  --gutter:clamp(16px,5vw,72px);--max:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--creme);color:var(--escuro);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;letter-spacing:-.015em;margin:0;text-wrap:balance}
+h2{font-size:clamp(34px,5vw,60px)}
+h2 em,h1 em{color:var(--cobre);font-style:italic}
+p{margin:0 0 1em;text-wrap:pretty}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.sec{padding:clamp(72px,11vw,140px) 0}
+.eyebrow{display:flex;align-items:center;gap:14px;font:600 12px/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--cobre);margin:0 0 22px}
+.eyebrow::after{content:"";height:1px;width:56px;background:currentColor;opacity:.6}
+.lead{font-size:clamp(18px,1.6vw,20px);line-height:1.6;max-width:60ch;color:var(--marrom)}
+.escuro{background:var(--escuro) url('img/veludo-escuro.webp') center/cover;color:var(--bege)}
+.escuro .lead{color:rgba(242,230,216,.78)}
+.bege{background:var(--bege) url('img/veludo-bege.webp') center/cover}
+.azul{background:var(--azul) url('img/veludo-azul.webp') center/cover;color:var(--bege)}
+.azul .lead{color:rgba(242,230,216,.82)}
+.azul h2 em,.escuro h2 em{color:var(--cobre-claro)}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:600 15px/1 var(--sans);letter-spacing:.02em;text-decoration:none;transition:background-color .2s,color .2s,border-color .2s}
+.btn-cobre{background:var(--cobre);color:#fff}
+.btn-cobre:hover{background:#94634a}
+.btn-linha{border:1px solid currentColor;color:inherit}
+.btn-linha:hover{background:var(--bege);color:var(--escuro);border-color:var(--bege)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--cobre-claro);outline-offset:3px}
+.ico{width:18px;height:18px;flex:none}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:20;background:rgba(28,27,24,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--bege);border-bottom:1px solid var(--linha-clara)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px}
+.topo img{height:34px;width:auto}
+.nav{display:flex;gap:28px;font-size:14px;letter-spacing:.02em}
+.nav a{text-decoration:none;opacity:.8;transition:opacity .2s}
+.nav a:hover{opacity:1}
+.topo .btn{min-height:42px;padding:0 18px;font-size:14px}
+.menu{display:none;position:relative}
+.menu summary{list-style:none;cursor:pointer;width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--linha-clara);border-radius:999px}
+.menu summary::-webkit-details-marker{display:none}
+.menu summary span,.menu summary span::before,.menu summary span::after{display:block;width:18px;height:1.5px;background:var(--bege);position:relative}
+.menu summary span::before,.menu summary span::after{content:"";position:absolute;left:0}
+.menu summary span::before{top:-6px}.menu summary span::after{top:6px}
+.menu nav{position:absolute;right:0;top:54px;background:var(--escuro-2);border:1px solid var(--linha-clara);border-radius:14px;padding:10px;display:flex;flex-direction:column;min-width:220px}
+.menu nav a{padding:12px 14px;text-decoration:none;border-radius:8px}
+.menu nav a:hover{background:rgba(242,230,216,.08)}
+@media (max-width:980px){.nav{display:none}.menu{display:block}.topo .btn span{display:none}.topo .btn{width:44px;padding:0;justify-content:center}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:clamp(56px,8vw,110px) 0 0}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:end}
+.hero h1{font-size:clamp(46px,7.4vw,104px);line-height:1.02}
+.hero .lead{margin:28px 0 36px}
+.hero-acoes{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:clamp(48px,7vw,96px)}
+.hero-foto{align-self:end;position:relative;max-width:520px;justify-self:end;width:100%}
+.hero-foto{margin-bottom:clamp(48px,7vw,96px)}
+.hero-foto img{width:100%;height:auto;max-height:720px;object-fit:cover;object-position:50% 0;border-radius:999px 999px 20px 20px}
+.credencial{position:absolute;left:-28px;bottom:36px;background:rgba(28,27,24,.86);border:1px solid var(--linha-clara);border-radius:14px;padding:16px 20px;font-size:13px;line-height:1.5;backdrop-filter:blur(6px)}
+.credencial strong{display:block;font:italic 400 19px/1.2 var(--serif);margin-bottom:4px}
+.hero-rodape{border-top:1px solid var(--linha-clara);position:relative}
+.hero-rodape .wrap{display:flex;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(242,230,216,.7)}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-acoes{margin-bottom:8px}
+  .hero-foto{justify-self:center;max-width:440px;margin-top:24px}
+  .hero-foto img{max-height:560px}
+  .credencial{left:12px;bottom:20px}
+  .hero-rodape .wrap{flex-direction:column;gap:8px}
+}
+
+/* números */
+.numeros{background:var(--cobre) url('img/veludo-laranja.webp') center/cover;color:#fff}
+.numeros .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:56px;padding-bottom:56px}
+.num small{display:block;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;opacity:.85}
+.num b{display:block;font:400 clamp(52px,7vw,88px)/1 var(--serif);margin:6px 0 8px;font-variant-numeric:lining-nums}
+.num span{font-size:15px;opacity:.92}
+@media (max-width:700px){.numeros .wrap{grid-template-columns:1fr;gap:28px}}
+
+/* soluções */
+.duas{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,7vw,110px);align-items:start}
+@media (max-width:900px){.duas{grid-template-columns:1fr}}
+.lista-servicos{list-style:none;margin:0;padding:0;border-top:1px solid var(--linha)}
+.lista-servicos li{display:flex;align-items:center;gap:18px;padding:20px 0;border-bottom:1px solid var(--linha);font:400 clamp(20px,2vw,25px)/1.3 var(--serif)}
+.lista-servicos li::before{content:"";width:9px;height:9px;flex:none;border:1px solid var(--cobre);border-radius:50%}
+.frase{font:italic 400 clamp(22px,2.4vw,30px)/1.35 var(--serif);color:var(--marrom);margin-top:40px;max-width:24ch}
+
+/* estrutura */
+.equip{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+.equip figure{margin:0;background:var(--bege);border-radius:16px;overflow:hidden;border:1px solid var(--linha)}
+.equip img{width:100%;height:auto;aspect-ratio:1;object-fit:contain;padding:16%;mix-blend-mode:multiply}
+.equip figcaption{padding:14px 18px 18px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--marrom);border-top:1px solid var(--linha)}
+@media (max-width:900px){.equip{grid-template-columns:repeat(2,1fr)}}
+
+/* casos */
+.casos{display:flex;flex-direction:column;margin-top:56px;border-top:1px solid var(--linha-clara)}
+.caso{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center;padding:32px 0;border-bottom:1px solid var(--linha-clara)}
+.par{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.par figure{margin:0;position:relative;border-radius:12px;overflow:hidden;background:#0d0d0c;aspect-ratio:4/3}
+.par img{width:100%;height:100%;object-fit:contain}
+.tag{position:absolute;left:10px;top:10px;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:var(--escuro);color:var(--bege)}
+.tag.depois{background:var(--cobre)}
+.caso h3{font-size:clamp(26px,2.8vw,36px);margin-bottom:10px}
+.caso p{color:rgba(242,230,216,.75);margin:0;max-width:36ch}
+.caso .n{font:italic 400 18px/1 var(--serif);color:var(--cobre-claro);display:block;margin-bottom:12px}
+@media (max-width:760px){.caso{grid-template-columns:1fr}}
+.mais-casos{margin-top:72px}
+.mais-casos h3{font-size:clamp(24px,2.6vw,32px);margin-bottom:8px}
+.mais-casos>p{color:rgba(242,230,216,.7)}
+.trilho{display:grid;grid-auto-flow:column;grid-auto-columns:min(88%,560px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px 0 16px;scrollbar-width:thin;scrollbar-color:var(--cobre) transparent}
+.trilho .par{scroll-snap-align:start}
+.trilho-dica{font-size:13px;color:rgba(242,230,216,.55);margin:0}
+
+/* detalhes */
+.detalhes{display:grid;grid-template-columns:repeat(2,1fr);gap:0 clamp(32px,5vw,72px);margin-top:56px;border-top:1px solid var(--linha-clara)}
+.detalhe{padding:30px 0;border-bottom:1px solid var(--linha-clara)}
+.detalhe h3{font-size:clamp(22px,2.2vw,28px);margin-bottom:10px}
+.detalhe p{margin:0;color:rgba(242,230,216,.8);max-width:46ch}
+@media (max-width:760px){.detalhes{grid-template-columns:1fr}}
+.clark{margin-top:64px;display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(24px,5vw,64px);align-items:center}
+.clark h3{font:italic 400 clamp(26px,2.8vw,34px)/1.1 var(--serif);margin-bottom:12px}
+.clark p{color:rgba(242,230,216,.8);margin:0}
+.clark .fotos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.clark img{border-radius:10px;aspect-ratio:379/273;object-fit:cover;width:100%}
+@media (max-width:760px){.clark{grid-template-columns:1fr}}
+
+/* parceria */
+.passos{list-style:none;margin:40px 0 0;padding:0;counter-reset:p}
+.passos li{counter-increment:p;display:grid;grid-template-columns:56px 1fr;gap:6px 18px;padding:24px 0;border-top:1px solid var(--linha)}
+.passos li:last-child{border-bottom:1px solid var(--linha)}
+.passos li::before{content:"0" counter(p);grid-row:span 2;font:italic 400 26px/1 var(--serif);color:var(--cobre)}
+.passos h3{font:600 13px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--escuro)}
+.passos p{margin:0;color:var(--marrom)}
+.foto-retrato{border-radius:999px 999px 18px 18px;overflow:hidden;position:sticky;top:96px}
+.foto-retrato img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 15%}
+@media (max-width:900px){.foto-retrato{position:static;max-width:420px}.foto-retrato img{aspect-ratio:4/5}}
+
+/* encaminhar */
+.encaminhar{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,96px)}
+@media (max-width:900px){.encaminhar{grid-template-columns:1fr}}
+.checklist{list-style:none;margin:28px 0;padding:24px 26px;background:var(--bege);border-radius:16px;display:flex;flex-direction:column;gap:12px}
+.checklist li{display:flex;gap:12px;align-items:flex-start}
+.checklist li::before{content:"";flex:none;width:18px;height:18px;margin-top:4px;border-radius:50%;background:var(--cobre) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 28px}
+.info div{border:1px solid var(--linha);border-radius:14px;padding:18px 20px}
+.info b{display:block;font:400 30px/1.1 var(--serif);color:var(--cobre);margin-bottom:6px}
+.info span{font-size:14px;color:var(--marrom);line-height:1.45;display:block}
+.btn-escuro{background:var(--escuro);color:var(--bege)}
+.btn-escuro:hover{background:var(--marrom)}
+.faq{border-top:1px solid var(--linha)}
+.faq details{border-bottom:1px solid var(--linha)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font:400 clamp(19px,1.8vw,22px)/1.3 var(--serif)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:12px;height:12px;border-right:1.5px solid var(--cobre);border-bottom:1.5px solid var(--cobre);transform:rotate(45deg) translateY(-4px);transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+.faq .resp{padding:0 0 22px;color:var(--marrom);max-width:62ch}
+.faq .resp p:last-child{margin:0}
+
+/* depoimentos */
+.depo{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:56px}
+.depo figure{margin:0;padding:clamp(26px,3vw,40px);border:1px solid var(--linha-clara);border-radius:18px;background:rgba(28,27,24,.45);display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.depo blockquote{margin:0;font:italic 400 clamp(18px,1.6vw,21px)/1.55 var(--serif)}
+.depo figcaption{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cobre-claro)}
+@media (max-width:760px){.depo{grid-template-columns:1fr}}
+
+/* sobre */
+.sobre-foto{border-radius:18px;overflow:hidden;margin-bottom:clamp(40px,6vw,72px)}
+.sobre-foto img{width:100%;aspect-ratio:16/7;object-fit:cover;object-position:50% 30%}
+@media (max-width:700px){.sobre-foto img{aspect-ratio:4/3}}
+.sobre-texto p{color:var(--marrom)}
+.formacao{margin-top:28px;display:flex;flex-direction:column;gap:0;border-top:1px solid var(--linha)}
+.formacao div{padding:16px 0;border-bottom:1px solid var(--linha);display:grid;grid-template-columns:140px 1fr;gap:16px;font-size:15px}
+.formacao dt{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cobre);padding-top:3px}
+.formacao dd{margin:0}
+@media (max-width:520px){.formacao div{grid-template-columns:1fr;gap:4px}}
+
+/* contato */
+.contato .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,96px);align-items:center}
+.contato h2{font-size:clamp(42px,6vw,80px)}
+.contato .sub{font:italic 400 clamp(20px,2vw,26px)/1.4 var(--serif);color:var(--cobre-claro);margin:18px 0 24px}
+.canais{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px}
+.canal{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border:1px solid var(--linha-clara);border-radius:14px;text-decoration:none;transition:border-color .2s,background-color .2s}
+a.canal:hover{border-color:var(--cobre-claro);background:rgba(242,230,216,.05)}
+.canal small{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--cobre-claro)}
+.canal span{font-size:16px;overflow-wrap:anywhere}
+.canal.largo{grid-column:1/-1}
+.contato-foto{border-radius:18px;overflow:hidden}
+.contato-foto img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 12%}
+@media (max-width:900px){.contato .wrap{grid-template-columns:1fr}.contato-foto{order:-1;max-width:460px}.contato-foto img{aspect-ratio:1}}
+@media (max-width:520px){.canais{grid-template-columns:1fr}}
+
+/* rodapé */
+.rodape{background:var(--escuro-2);color:rgba(242,230,216,.7);font-size:13px;line-height:1.6}
+.rodape .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-top:36px;padding-bottom:36px}
+.rodape img{height:30px;width:auto;opacity:.9}
+.rodape strong{color:var(--bege);font-weight:600}
+
+/* whatsapp fixo */
+.zap{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:30;width:58px;height:58px;border-radius:50%;background:var(--cobre);color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .2s,background-color .2s}
+.zap:hover{background:#94634a;transform:translateY(-2px)}
+.zap svg{width:28px;height:28px}
+
+/* entrada suave */
+@media (prefers-reduced-motion:no-preference){
+  .js .rev{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js .rev.in{opacity:1;transform:none}
+}
+</style>
 </head>
 <body>
-<x-dc>
-<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet"><style>body{margin:0;background:#e7e2da;font-family:system-ui,sans-serif}a{color:#5A4A3B}a:hover{color:#A77253}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 8px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}.dv-tname{font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a}.dv-note{font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.55);margin:0 0 24px;max-width:900px}.dv-opts{display:flex;flex-wrap:wrap;gap:36px;align-items:flex-start}.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 12px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.6)}.dv-card{max-width:100%;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06);overflow:hidden}.dv-opt:target .dv-oid{background:#2a78d6;color:#fff}.dv-next{margin:22px 0 0;font:12px/1.5 system-ui,sans-serif;color:rgba(0,0,0,.5)}</style></helmet>
-<section class="dv-turn" id="t1">
-<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Portfólio Endodelivery: 3 direções, com as telas 01, 02, 04 e 10 de 11 (1080×1920)</span></div>
-<p class="dv-note">Base: texto do Portfólio.pdf novo, fotos reais do ensaio, radiografias e equipamentos do PDF, cinco cores da identidade, Lora (títulos) e Host Grotesk (texto). A direção escolhida segue para as 11 telas, para a versão A4 e para os outros 4 documentos.</p>
-<div class="dv-opts">
 
-<div class="dv-opt" id="1a">
-<div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>Editorial: fundo bege, arcos e linhas finas. Sereno e clássico.</div>
-<div class="dv-card" style="padding:24px;display:flex;gap:22px;background:#faf8f5">
+<header class="topo">
+  <div class="wrap">
+    <a href="#inicio" aria-label="Dr. Gabriel Germano, início"><img src="img/horizontal-tag-bege.webp" alt="Dr. Gabriel Germano" width="620" height="152"></a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#solucoes">Soluções</a><a href="#estrutura">Estrutura</a><a href="#casos">Casos</a><a href="#parceria">Parceria</a><a href="#encaminhar">Encaminhar</a><a href="#sobre">Sobre</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="btn btn-cobre" href="https://wa.me/5535998462695?text=Ol%C3%A1%2C%20Dr.%20Gabriel!%20Quero%20conhecer%20a%20parceria%20em%20endodontia." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>
+        <span>Quero ser parceiro</span>
+      </a>
+      <details class="menu">
+        <summary aria-label="Abrir menu"><span></span></summary>
+        <nav aria-label="Seções">
+          <a href="#solucoes">Soluções</a><a href="#estrutura">Estrutura</a><a href="#casos">Casos clínicos</a><a href="#parceria">Como funciona</a><a href="#encaminhar">Encaminhar paciente</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>
 
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px">
-<div style="width:378px;height:672px;overflow:hidden;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.14)">
-<div style="width:1080px;height:1920px;transform:scale(.35);transform-origin:0 0;position:relative;overflow:hidden;background:#F2E6D8;color:#252420;font-family:'Host Grotesk',sans-serif">
-<div style="position:absolute;left:80px;right:80px;top:78px;display:flex;justify-content:space-between;font-size:22px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:#5A4A3B"><span>Endodelivery</span><span>01 / 11</span></div>
-<div style="position:absolute;left:80px;right:80px;top:126px;height:2px;background:#A77253"></div>
-<div style="position:absolute;left:80px;top:184px;font-family:Lora,serif;font-size:118px;line-height:1.02;letter-spacing:-.015em">Endodontia<br><em style="color:#A77253">especializada.</em><br>Na sua clínica.</div>
-<p style="position:absolute;left:80px;top:580px;width:600px;margin:0;font-size:33px;line-height:1.42;color:#5A4A3B">Excelência clínica e praticidade para dentistas que valorizam uma parceria de confiança.</p>
-<div style="position:absolute;right:56px;top:742px;width:564px;height:858px;border:2px solid #A77253;border-bottom:0;border-radius:284px 284px 0 0"></div>
-<div style="position:absolute;right:80px;top:766px;width:520px;height:834px;border-radius:260px 260px 0 0;overflow:hidden;background:#615F6D"><img src="assets/fotos/MRL_5549.jpg" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block"></div>
-<div style="position:absolute;left:80px;top:1170px;width:350px;display:flex;flex-direction:column;gap:22px"><span style="font-size:20px;font-weight:600;letter-spacing:.3em;line-height:1.6;text-transform:uppercase;color:#5A4A3B">Endodontia ao seu alcance.</span><span style="font-family:Lora,serif;font-style:italic;font-size:44px;line-height:1.18">Tecnologia, precisão e cuidado em cada tratamento.</span></div>
-<div style="position:absolute;left:0;right:0;bottom:0;height:320px;background:#615F6D;color:#F2E6D8;display:flex;align-items:center;justify-content:space-between;padding:0 80px"><img src="assets/logo/vertical-tag-bege.png" style="height:168px;display:block"><div style="text-align:right;font-size:24px;line-height:1.65;letter-spacing:.04em">Dr. Gabriel Germano · Endodontista<br>CRO-MG 62.727 · CRO-SP 148.553<br>EPAO 15.429</div></div>
-</div>
-</div>
-<figcaption style="font:500 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">01 · Capa</figcaption>
-</figure>
+<main id="inicio">
 
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px">
-<div style="width:378px;height:672px;overflow:hidden;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.14)">
-<div style="width:1080px;height:1920px;transform:scale(.35);transform-origin:0 0;position:relative;overflow:hidden;background:#F2E6D8;color:#252420;font-family:'Host Grotesk',sans-serif">
-<div style="position:absolute;left:80px;right:80px;top:78px;display:flex;justify-content:space-between;font-size:22px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:#5A4A3B"><span>Endodelivery</span><span>02 / 11</span></div>
-<div style="position:absolute;left:80px;right:80px;top:126px;height:2px;background:#A77253"></div>
-<div style="position:absolute;left:80px;top:184px;width:920px;font-family:Lora,serif;font-size:96px;line-height:1.04;letter-spacing:-.015em">Sua clínica.<br><em style="color:#A77253">Mais uma solução especializada.</em></div>
-<p style="position:absolute;left:80px;top:520px;width:860px;margin:0;font-size:33px;line-height:1.42;color:#5A4A3B">Conte com um parceiro dedicado à endodontia para atender às necessidades dos seus pacientes, diretamente na sua clínica.</p>
-<div style="position:absolute;left:80px;right:80px;top:740px;display:flex;flex-direction:column">
-<div style="font-size:20px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#5A4A3B;padding-bottom:18px;border-bottom:2px solid #A77253">Soluções em endodontia</div>
-<div style="display:flex;align-items:baseline;gap:28px;padding:20px 0;border-bottom:1px solid #A77253"><span style="flex:none;width:50px;font-family:Lora,serif;font-style:italic;font-size:30px;color:#A77253">01</span><span style="font-size:34px;line-height:1.25">Urgências endodônticas</span></div>
-<div style="display:flex;align-items:baseline;gap:28px;padding:20px 0;border-bottom:1px solid #A77253"><span style="flex:none;width:50px;font-family:Lora,serif;font-style:italic;font-size:30px;color:#A77253">02</span><span style="font-size:34px;line-height:1.25">Capeamento pulpar</span></div>
-<div style="display:flex;align-items:baseline;gap:28px;padding:20px 0;border-bottom:1px solid #A77253"><span style="flex:none;width:50px;font-family:Lora,serif;font-style:italic;font-size:30px;color:#A77253">03</span><span style="font-size:34px;line-height:1.25">Tratamentos endodônticos em dentes permanentes</span></div>
-<div style="display:flex;align-items:baseline;gap:28px;padding:20px 0;border-bottom:1px solid #A77253"><span style="flex:none;width:50px;font-family:Lora,serif;font-style:italic;font-size:30px;color:#A77253">04</span><span style="font-size:34px;line-height:1.25">Retratamentos endodônticos</span></div>
-<div style="display:flex;align-items:baseline;gap:28px;padding:20px 0;border-bottom:1px solid #A77253"><span style="flex:none;width:50px;font-family:Lora,serif;font-style:italic;font-size:30px;color:#A77253">05</span><span style="font-size:34px;line-height:1.25">Instalação de retentores intrarradiculares</span></div>
-<div style="display:flex;align-items:baseline;gap:28px;padding:20px 0;border-bottom:1px solid #A77253"><span style="flex:none;width:50px;font-family:Lora,serif;font-style:italic;font-size:30px;color:#A77253">06</span><span style="font-size:34px;line-height:1.25">Restaurações definitivas após endodontia</span></div>
-<div style="display:flex;align-items:baseline;gap:28px;padding:20px 0;border-bottom:1px solid #A77253"><span style="flex:none;width:50px;font-family:Lora,serif;font-style:italic;font-size:30px;color:#A77253">07</span><span style="font-size:34px;line-height:1.25">Cirurgias periapicais</span></div>
-<div style="display:flex;align-items:baseline;gap:28px;padding:20px 0;border-bottom:1px solid #A77253"><span style="flex:none;width:50px;font-family:Lora,serif;font-style:italic;font-size:30px;color:#A77253">08</span><span style="font-size:34px;line-height:1.25">Avaliação e planejamento de casos complexos</span></div>
-</div>
-<div style="position:absolute;left:80px;right:80px;bottom:90px;background:#5A4A3B;color:#F2E6D8;border-radius:28px;padding:50px 60px;font-family:Lora,serif;font-style:italic;font-size:43px;line-height:1.25">Precisão técnica, planejamento individualizado e foco na preservação dentária.</div>
-</div>
-</div>
-<figcaption style="font:500 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">02 · Soluções</figcaption>
-</figure>
-
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px">
-<div style="width:378px;height:672px;overflow:hidden;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.14)">
-<div style="width:1080px;height:1920px;transform:scale(.35);transform-origin:0 0;position:relative;overflow:hidden;background:#F2E6D8;color:#252420;font-family:'Host Grotesk',sans-serif">
-<div style="position:absolute;left:80px;right:80px;top:78px;display:flex;justify-content:space-between;font-size:22px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:#5A4A3B"><span>Endodelivery</span><span>04 / 11</span></div>
-<div style="position:absolute;left:80px;right:80px;top:126px;height:2px;background:#A77253"></div>
-<div style="position:absolute;left:80px;top:184px;font-family:Lora,serif;font-size:96px;line-height:1.04;letter-spacing:-.015em">Casos <em style="color:#A77253">clínicos</em></div>
-<div style="position:absolute;left:80px;right:80px;top:350px;bottom:80px;display:flex;flex-direction:column;justify-content:space-between">
-<div style="display:grid;grid-template-columns:290px 1fr;gap:36px;align-items:center;padding-top:26px;border-top:1px solid #A77253"><div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:Lora,serif;font-style:italic;font-size:28px;color:#A77253">01</span><span style="font-family:Lora,serif;font-size:38px;line-height:1.1">Radix Entomolaris</span><span style="font-size:25px;line-height:1.38;color:#5A4A3B">Sempre respeitando a variação anatômica de cada paciente.</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px"><div style="position:relative;height:212px;border-radius:16px;overflow:hidden;background:#252420"><img src="assets/rx/radix-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:12px;bottom:12px;background:#F2E6D8;color:#252420;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Antes</span></div><div style="position:relative;height:212px;border-radius:16px;overflow:hidden;background:#252420"><img src="assets/rx/radix-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:12px;bottom:12px;background:#A77253;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Depois</span></div></div></div>
-<div style="display:grid;grid-template-columns:290px 1fr;gap:36px;align-items:center;padding-top:26px;border-top:1px solid #A77253"><div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:Lora,serif;font-style:italic;font-size:28px;color:#A77253">02</span><span style="font-family:Lora,serif;font-size:38px;line-height:1.1">Reparo ósseo</span><span style="font-size:25px;line-height:1.38;color:#5A4A3B">Sempre proservando os casos para acompanhamento de sucesso.</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px"><div style="position:relative;height:212px;border-radius:16px;overflow:hidden;background:#252420"><img src="assets/rx/reparo-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:12px;bottom:12px;background:#F2E6D8;color:#252420;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Antes</span></div><div style="position:relative;height:212px;border-radius:16px;overflow:hidden;background:#252420"><img src="assets/rx/reparo-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:12px;bottom:12px;background:#A77253;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Depois</span></div></div></div>
-<div style="display:grid;grid-template-columns:290px 1fr;gap:36px;align-items:center;padding-top:26px;border-top:1px solid #A77253"><div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:Lora,serif;font-style:italic;font-size:28px;color:#A77253">03</span><span style="font-family:Lora,serif;font-size:38px;line-height:1.1">Sessão única</span><span style="font-size:25px;line-height:1.38;color:#5A4A3B">Casos com planejamento respeitando a necessidade de cada paciente.</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px"><div style="position:relative;height:212px;border-radius:16px;overflow:hidden;background:#252420"><img src="assets/rx/sessao-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:12px;bottom:12px;background:#F2E6D8;color:#252420;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Antes</span></div><div style="position:relative;height:212px;border-radius:16px;overflow:hidden;background:#252420"><img src="assets/rx/sessao-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:12px;bottom:12px;background:#A77253;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Depois</span></div></div></div>
-<div style="display:grid;grid-template-columns:290px 1fr;gap:36px;align-items:center;padding-top:26px;border-top:1px solid #A77253"><div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:Lora,serif;font-style:italic;font-size:28px;color:#A77253">04</span><span style="font-family:Lora,serif;font-size:38px;line-height:1.1">Blindagem das embocaduras dos canais</span><span style="font-size:25px;line-height:1.38;color:#5A4A3B">Segurança contra futuras reinfecções.</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px"><div style="position:relative;height:212px;border-radius:16px;overflow:hidden;background:#252420"><img src="assets/rx/blindagem-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:12px;bottom:12px;background:#F2E6D8;color:#252420;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Antes</span></div><div style="position:relative;height:212px;border-radius:16px;overflow:hidden;background:#252420"><img src="assets/rx/blindagem-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:12px;bottom:12px;background:#A77253;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Depois</span></div></div></div>
-<div style="display:grid;grid-template-columns:290px 1fr;gap:36px;align-items:center;padding-top:26px;border-top:1px solid #A77253"><div style="display:flex;flex-direction:column;gap:10px"><span style="font-family:Lora,serif;font-style:italic;font-size:28px;color:#A77253">05</span><span style="font-family:Lora,serif;font-size:38px;line-height:1.1">Planejamento de casos complexos</span><span style="font-size:25px;line-height:1.38;color:#5A4A3B">Traz a segurança e precisão da execução dos casos.</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px"><div style="position:relative;height:212px;border-radius:16px;overflow:hidden;background:#252420"><img src="assets/rx/complexo-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:12px;bottom:12px;background:#F2E6D8;color:#252420;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Antes</span></div><div style="position:relative;height:212px;border-radius:16px;overflow:hidden;background:#252420"><img src="assets/rx/complexo-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:12px;bottom:12px;background:#A77253;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Depois</span></div></div></div>
-</div>
-</div>
-</div>
-<figcaption style="font:500 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">04 · Casos clínicos</figcaption>
-</figure>
-
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px">
-<div style="width:378px;height:672px;overflow:hidden;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.14)">
-<div style="width:1080px;height:1920px;transform:scale(.35);transform-origin:0 0;position:relative;overflow:hidden;background:#F2E6D8;color:#252420;font-family:'Host Grotesk',sans-serif">
-<div style="position:absolute;left:80px;right:80px;top:78px;display:flex;justify-content:space-between;font-size:22px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:#5A4A3B"><span>Endodelivery</span><span>10 / 11</span></div>
-<div style="position:absolute;left:80px;right:80px;top:126px;height:2px;background:#A77253"></div>
-<div style="position:absolute;left:80px;top:330px;font-family:Lora,serif;font-size:150px;line-height:.98;letter-spacing:-.02em">Sobre<br><em style="color:#A77253">mim</em></div>
-<div style="position:absolute;right:56px;top:176px;width:484px;height:714px;border:2px solid #615F6D;border-bottom:0;border-radius:244px 244px 0 0"></div>
-<div style="position:absolute;right:80px;top:200px;width:440px;height:690px;border-radius:220px 220px 0 0;overflow:hidden"><img src="assets/fotos/PJF_2531.jpg" style="width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block"></div>
-<div style="position:absolute;left:80px;right:80px;top:890px;height:2px;background:#A77253"></div>
-<div style="position:absolute;left:80px;right:80px;top:950px;display:flex;flex-direction:column;gap:22px;font-size:28px;line-height:1.48">
-<p style="margin:0">Sou cirurgião-dentista com atuação direcionada à Endodontia, pautada pela precisão técnica, pelo planejamento individualizado e pelo uso da tecnologia como aliada da prática clínica.</p>
-<p style="margin:0">Sou graduado pela Universidade de Ribeirão Preto e especialista em Endodontia pela Faculdade de Odontologia de Ribeirão Preto da Universidade de São Paulo (FORP-USP). Mantenho o compromisso com o aperfeiçoamento técnico e a atualização científica, buscando uma atuação fundamentada em evidências.</p>
-<p style="margin:0">Acredito que preservar dentes naturais vai além de tratar canais: significa contribuir para a saúde bucal e para a continuidade de reabilitações odontológicas.</p>
-<p style="margin:0">Meu trabalho une rigor técnico e atenção ao paciente, valorizando o conforto durante o atendimento, a comunicação clara e a construção de relações de confiança com pacientes e dentistas parceiros.</p>
-</div>
-<div style="position:absolute;left:80px;right:80px;bottom:76px;display:flex;justify-content:space-between;align-items:flex-end"><div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:Lora,serif;font-style:italic;font-size:42px;color:#5A4A3B">Dr. Gabriel Germano</span><span style="font-size:20px;letter-spacing:.24em;text-transform:uppercase;color:#5A4A3B">Cirurgião-dentista · Endodontista</span></div><img src="assets/logo/simbolo-laranja.png" style="height:56px;display:block"></div>
-</div>
-</div>
-<figcaption style="font:500 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">10 · Sobre mim</figcaption>
-</figure>
-
-</div>
-</div>
-
-<div class="dv-opt" id="1b">
-<div class="dv-olabel"><a class="dv-oid" href="#1b">1b</a>Veludo: fundos escuros com a textura da marca e fotos em destaque. Sofisticado.</div>
-<div class="dv-card" style="padding:24px;display:flex;gap:22px;background:#faf8f5">
-
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px">
-<div style="width:378px;height:672px;overflow:hidden;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.14)">
-<div style="width:1080px;height:1920px;transform:scale(.35);transform-origin:0 0;position:relative;overflow:hidden;background:#252420 url('assets/textura/veludo-escuro.jpg') center/cover;color:#F2E6D8;font-family:'Host Grotesk',sans-serif">
-<img src="assets/fotos/PJF_2780.jpg" style="position:absolute;left:0;top:450px;width:1080px;height:1180px;object-fit:cover;object-position:50% 0;display:block;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 58%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 16%,#000 58%,transparent 100%)">
-<div style="position:absolute;left:80px;right:80px;top:76px;display:flex;justify-content:space-between;align-items:center;font-size:22px;font-weight:500;letter-spacing:.34em;text-transform:uppercase"><img src="assets/logo/simbolo-bege.png" style="height:44px;display:block"><span>Endodelivery</span></div>
-<div style="position:absolute;left:80px;top:180px;font-family:Lora,serif;font-size:110px;line-height:1.02;letter-spacing:-.015em">Endodontia<br><em style="color:#A77253">especializada.</em><br>Na sua clínica.</div>
-<div style="position:absolute;left:80px;right:80px;bottom:80px;display:flex;flex-direction:column;gap:30px">
-<p style="margin:0;width:760px;font-size:32px;line-height:1.42">Excelência clínica e praticidade para dentistas que valorizam uma parceria de confiança.</p>
-<div style="height:2px;background:#A77253"></div>
-<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px"><div style="display:flex;flex-direction:column;gap:12px;max-width:440px"><span style="font-size:19px;font-weight:600;letter-spacing:.3em;text-transform:uppercase">Endodontia ao seu alcance.</span><span style="font-family:Lora,serif;font-style:italic;font-size:34px;line-height:1.2">Tecnologia, precisão e cuidado em cada tratamento.</span></div><div style="text-align:right;font-size:21px;line-height:1.65;letter-spacing:.04em">Dr. Gabriel Germano · Endodontista<br>CRO-MG 62.727 · CRO-SP 148.553<br>EPAO 15.429</div></div>
-</div>
-</div>
-</div>
-<figcaption style="font:500 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">01 · Capa</figcaption>
-</figure>
-
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px">
-<div style="width:378px;height:672px;overflow:hidden;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.14)">
-<div style="width:1080px;height:1920px;transform:scale(.35);transform-origin:0 0;position:relative;overflow:hidden;background:#615F6D url('assets/textura/veludo-azul.jpg') center/cover;color:#F2E6D8;font-family:'Host Grotesk',sans-serif">
-<div style="position:absolute;left:80px;right:80px;top:76px;display:flex;justify-content:space-between;align-items:center;font-size:22px;font-weight:500;letter-spacing:.34em;text-transform:uppercase"><img src="assets/logo/simbolo-bege.png" style="height:44px;display:block"><span>02 / 11</span></div>
-<div style="position:absolute;left:80px;top:180px;width:920px;font-family:Lora,serif;font-size:96px;line-height:1.04;letter-spacing:-.015em">Sua clínica.<br><em>Mais uma solução especializada.</em></div>
-<p style="position:absolute;left:80px;top:520px;width:860px;margin:0;font-size:33px;line-height:1.42">Conte com um parceiro dedicado à endodontia para atender às necessidades dos seus pacientes, diretamente na sua clínica.</p>
-<div style="position:absolute;left:80px;right:80px;top:740px;font-size:20px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;padding-bottom:18px;border-bottom:2px solid #F2E6D8">Soluções em endodontia</div>
-<div style="position:absolute;left:80px;right:80px;top:824px;display:flex;flex-direction:column;align-items:flex-start;gap:16px">
-<span style="padding:18px 34px;border:2px solid #F2E6D8;border-radius:999px;font-size:31px;line-height:1.2">Urgências endodônticas</span>
-<span style="padding:18px 34px;border:2px solid #F2E6D8;border-radius:999px;font-size:31px;line-height:1.2">Capeamento pulpar</span>
-<span style="padding:18px 34px;border:2px solid #F2E6D8;border-radius:999px;font-size:31px;line-height:1.2">Tratamentos endodônticos em dentes permanentes</span>
-<span style="padding:18px 34px;border:2px solid #F2E6D8;border-radius:999px;font-size:31px;line-height:1.2">Retratamentos endodônticos</span>
-<span style="padding:18px 34px;border:2px solid #F2E6D8;border-radius:999px;font-size:31px;line-height:1.2">Instalação de retentores intrarradiculares</span>
-<span style="padding:18px 34px;border:2px solid #F2E6D8;border-radius:999px;font-size:31px;line-height:1.2">Restaurações definitivas após endodontia</span>
-<span style="padding:18px 34px;border:2px solid #F2E6D8;border-radius:999px;font-size:31px;line-height:1.2">Cirurgias periapicais</span>
-<span style="padding:18px 34px;border:2px solid #F2E6D8;border-radius:999px;font-size:31px;line-height:1.2">Avaliação e planejamento de casos complexos</span>
-</div>
-<div style="position:absolute;left:80px;right:80px;bottom:96px;font-family:Lora,serif;font-style:italic;font-size:44px;line-height:1.25">Precisão técnica, planejamento individualizado e foco na preservação dentária.</div>
-</div>
-</div>
-<figcaption style="font:500 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">02 · Soluções</figcaption>
-</figure>
-
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px">
-<div style="width:378px;height:672px;overflow:hidden;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.14)">
-<div style="width:1080px;height:1920px;transform:scale(.35);transform-origin:0 0;position:relative;overflow:hidden;background:#252420;color:#F2E6D8;font-family:'Host Grotesk',sans-serif">
-<div style="position:absolute;left:80px;right:80px;top:76px;display:flex;justify-content:space-between;align-items:center;font-size:22px;font-weight:500;letter-spacing:.34em;text-transform:uppercase"><img src="assets/logo/simbolo-bege.png" style="height:44px;display:block"><span>04 / 11</span></div>
-<div style="position:absolute;left:80px;top:180px;font-family:Lora,serif;font-size:96px;line-height:1.04;letter-spacing:-.015em">Casos <em style="color:#A77253">clínicos</em></div>
-<div style="position:absolute;left:80px;right:80px;top:350px;bottom:80px;display:flex;flex-direction:column;justify-content:space-between">
-<div style="display:grid;grid-template-columns:600px 1fr;gap:36px;align-items:center;padding-top:26px;border-top:1px solid #5A4A3B"><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div style="position:relative;height:210px;border-radius:12px;overflow:hidden"><img src="assets/rx/radix-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:10px;top:10px;background:#252420;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Antes</span></div><div style="position:relative;height:210px;border-radius:12px;overflow:hidden"><img src="assets/rx/radix-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:10px;top:10px;background:#A77253;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Depois</span></div></div><div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:Lora,serif;font-style:italic;font-size:52px;line-height:1;color:#A77253">01</span><span style="font-family:Lora,serif;font-size:34px;line-height:1.12">Radix Entomolaris</span><span style="font-size:24px;line-height:1.38">Sempre respeitando a variação anatômica de cada paciente.</span></div></div>
-<div style="display:grid;grid-template-columns:600px 1fr;gap:36px;align-items:center;padding-top:26px;border-top:1px solid #5A4A3B"><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div style="position:relative;height:210px;border-radius:12px;overflow:hidden"><img src="assets/rx/reparo-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:10px;top:10px;background:#252420;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Antes</span></div><div style="position:relative;height:210px;border-radius:12px;overflow:hidden"><img src="assets/rx/reparo-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:10px;top:10px;background:#A77253;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Depois</span></div></div><div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:Lora,serif;font-style:italic;font-size:52px;line-height:1;color:#A77253">02</span><span style="font-family:Lora,serif;font-size:34px;line-height:1.12">Reparo ósseo</span><span style="font-size:24px;line-height:1.38">Sempre proservando os casos para acompanhamento de sucesso.</span></div></div>
-<div style="display:grid;grid-template-columns:600px 1fr;gap:36px;align-items:center;padding-top:26px;border-top:1px solid #5A4A3B"><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div style="position:relative;height:210px;border-radius:12px;overflow:hidden"><img src="assets/rx/sessao-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:10px;top:10px;background:#252420;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Antes</span></div><div style="position:relative;height:210px;border-radius:12px;overflow:hidden"><img src="assets/rx/sessao-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:10px;top:10px;background:#A77253;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Depois</span></div></div><div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:Lora,serif;font-style:italic;font-size:52px;line-height:1;color:#A77253">03</span><span style="font-family:Lora,serif;font-size:34px;line-height:1.12">Sessão única</span><span style="font-size:24px;line-height:1.38">Casos com planejamento respeitando a necessidade de cada paciente.</span></div></div>
-<div style="display:grid;grid-template-columns:600px 1fr;gap:36px;align-items:center;padding-top:26px;border-top:1px solid #5A4A3B"><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div style="position:relative;height:210px;border-radius:12px;overflow:hidden"><img src="assets/rx/blindagem-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:10px;top:10px;background:#252420;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Antes</span></div><div style="position:relative;height:210px;border-radius:12px;overflow:hidden"><img src="assets/rx/blindagem-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:10px;top:10px;background:#A77253;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Depois</span></div></div><div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:Lora,serif;font-style:italic;font-size:52px;line-height:1;color:#A77253">04</span><span style="font-family:Lora,serif;font-size:34px;line-height:1.12">Blindagem das embocaduras dos canais</span><span style="font-size:24px;line-height:1.38">Segurança contra futuras reinfecções.</span></div></div>
-<div style="display:grid;grid-template-columns:600px 1fr;gap:36px;align-items:center;padding-top:26px;border-top:1px solid #5A4A3B"><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div style="position:relative;height:210px;border-radius:12px;overflow:hidden"><img src="assets/rx/complexo-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:10px;top:10px;background:#252420;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Antes</span></div><div style="position:relative;height:210px;border-radius:12px;overflow:hidden"><img src="assets/rx/complexo-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:10px;top:10px;background:#A77253;color:#F2E6D8;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px;border-radius:999px">Depois</span></div></div><div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:Lora,serif;font-style:italic;font-size:52px;line-height:1;color:#A77253">05</span><span style="font-family:Lora,serif;font-size:34px;line-height:1.12">Planejamento de casos complexos</span><span style="font-size:24px;line-height:1.38">Traz a segurança e precisão da execução dos casos.</span></div></div>
-</div>
-</div>
-</div>
-<figcaption style="font:500 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">04 · Casos clínicos</figcaption>
-</figure>
-
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px">
-<div style="width:378px;height:672px;overflow:hidden;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.14)">
-<div style="width:1080px;height:1920px;transform:scale(.35);transform-origin:0 0;position:relative;overflow:hidden;background:#5A4A3B;color:#F2E6D8;font-family:'Host Grotesk',sans-serif">
-<div style="position:absolute;left:80px;right:80px;top:76px;display:flex;justify-content:space-between;align-items:center;font-size:22px;font-weight:500;letter-spacing:.34em;text-transform:uppercase"><img src="assets/logo/simbolo-bege.png" style="height:44px;display:block"><span>10 / 11</span></div>
-<div style="position:absolute;left:80px;right:80px;top:170px;height:700px;border-radius:32px;overflow:hidden;background:#252420"><img src="assets/fotos/PJF_2680.jpg" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block"></div>
-<div style="position:absolute;left:80px;top:906px;font-family:Lora,serif;font-size:116px;line-height:1;letter-spacing:-.02em">Sobre <em>mim</em></div>
-<div style="position:absolute;left:80px;right:80px;top:1066px;display:flex;flex-direction:column;gap:22px;font-size:28px;line-height:1.48">
-<p style="margin:0">Sou cirurgião-dentista com atuação direcionada à Endodontia, pautada pela precisão técnica, pelo planejamento individualizado e pelo uso da tecnologia como aliada da prática clínica.</p>
-<p style="margin:0">Sou graduado pela Universidade de Ribeirão Preto e especialista em Endodontia pela Faculdade de Odontologia de Ribeirão Preto da Universidade de São Paulo (FORP-USP). Mantenho o compromisso com o aperfeiçoamento técnico e a atualização científica, buscando uma atuação fundamentada em evidências.</p>
-<p style="margin:0">Acredito que preservar dentes naturais vai além de tratar canais: significa contribuir para a saúde bucal e para a continuidade de reabilitações odontológicas.</p>
-<p style="margin:0">Meu trabalho une rigor técnico e atenção ao paciente, valorizando o conforto durante o atendimento, a comunicação clara e a construção de relações de confiança com pacientes e dentistas parceiros.</p>
-</div>
-</div>
-</div>
-<figcaption style="font:500 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">10 · Sobre mim</figcaption>
-</figure>
-
-</div>
-</div>
-
-<div class="dv-opt" id="1c">
-<div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Monograma: tipografia gigante e uma cor da marca por tela. Moderno e gráfico.</div>
-<div class="dv-card" style="padding:24px;display:flex;gap:22px;background:#faf8f5">
-
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px">
-<div style="width:378px;height:672px;overflow:hidden;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.14)">
-<div style="width:1080px;height:1920px;transform:scale(.35);transform-origin:0 0;position:relative;overflow:hidden;background:#252420;color:#F2E6D8;font-family:'Host Grotesk',sans-serif">
-<img src="assets/fotos/PJF_2666.jpg" style="position:absolute;left:300px;top:0;width:780px;height:1240px;object-fit:cover;object-position:50% 12%;display:block">
-<div style="position:absolute;left:0;top:1920px;width:1920px;height:260px;transform:rotate(-90deg);transform-origin:0 0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:226px;line-height:1;letter-spacing:-.035em;color:#A77253">ENDODELIVERY</div>
-<div style="position:absolute;right:48px;top:64px;font-size:22px;font-weight:700;letter-spacing:.3em">01 / 11</div>
-<div style="position:absolute;left:300px;top:1110px;width:560px;background:#615F6D;padding:34px 40px;display:flex;flex-direction:column;gap:12px"><span style="font-size:19px;font-weight:700;letter-spacing:.3em;text-transform:uppercase">Endodontia ao seu alcance.</span><span style="font-size:29px;line-height:1.35">Tecnologia, precisão e cuidado em cada tratamento.</span></div>
-<div style="position:absolute;left:300px;right:80px;top:1352px;display:flex;flex-direction:column;gap:26px">
-<div style="font-family:Lora,serif;font-size:70px;line-height:1.04;letter-spacing:-.01em">Endodontia<br><em style="color:#A77253">especializada.</em><br>Na sua clínica.</div>
-<p style="margin:0;font-size:28px;line-height:1.42">Excelência clínica e praticidade para dentistas que valorizam uma parceria de confiança.</p>
-<div style="height:2px;background:#5A4A3B"></div>
-<div style="font-size:19px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;line-height:1.7">Dr. Gabriel Germano · Endodontista<br>CRO-MG 62.727 · CRO-SP 148.553 · EPAO 15.429</div>
-</div>
-</div>
-</div>
-<figcaption style="font:500 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">01 · Capa</figcaption>
-</figure>
-
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px">
-<div style="width:378px;height:672px;overflow:hidden;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.14)">
-<div style="width:1080px;height:1920px;transform:scale(.35);transform-origin:0 0;position:relative;overflow:hidden;background:#A77253;color:#252420;font-family:'Host Grotesk',sans-serif">
-<div style="position:absolute;left:80px;right:80px;top:76px;display:flex;justify-content:space-between;font-size:22px;font-weight:700;letter-spacing:.3em;text-transform:uppercase"><span>Endodelivery</span><span>02 / 11</span></div>
-<div style="position:absolute;left:80px;top:168px;width:920px"><div style="font-weight:800;font-size:112px;letter-spacing:-.035em;line-height:.95;text-transform:uppercase">Sua clínica.</div><div style="font-family:Lora,serif;font-style:italic;font-size:76px;line-height:1.05;margin-top:16px">Mais uma solução especializada.</div></div>
-<div style="position:absolute;left:80px;right:80px;top:510px;background:#F2E6D8;padding:56px 56px 60px;display:flex;flex-direction:column;gap:34px">
-<p style="margin:0;font-size:31px;line-height:1.42">Conte com um parceiro dedicado à endodontia para atender às necessidades dos seus pacientes, diretamente na sua clínica.</p>
-<div style="font-size:20px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#5A4A3B;padding-bottom:16px;border-bottom:2px solid #252420">Soluções em endodontia</div>
-<div style="display:grid;grid-template-columns:1fr 1fr;column-gap:40px;row-gap:34px">
-<div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:44px;letter-spacing:-.02em;line-height:1;color:#A77253">01</span><span style="font-size:28px;line-height:1.3">Urgências endodônticas</span></div>
-<div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:44px;letter-spacing:-.02em;line-height:1;color:#A77253">02</span><span style="font-size:28px;line-height:1.3">Capeamento pulpar</span></div>
-<div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:44px;letter-spacing:-.02em;line-height:1;color:#A77253">03</span><span style="font-size:28px;line-height:1.3">Tratamentos endodônticos em dentes permanentes</span></div>
-<div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:44px;letter-spacing:-.02em;line-height:1;color:#A77253">04</span><span style="font-size:28px;line-height:1.3">Retratamentos endodônticos</span></div>
-<div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:44px;letter-spacing:-.02em;line-height:1;color:#A77253">05</span><span style="font-size:28px;line-height:1.3">Instalação de retentores intrarradiculares</span></div>
-<div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:44px;letter-spacing:-.02em;line-height:1;color:#A77253">06</span><span style="font-size:28px;line-height:1.3">Restaurações definitivas após endodontia</span></div>
-<div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:44px;letter-spacing:-.02em;line-height:1;color:#A77253">07</span><span style="font-size:28px;line-height:1.3">Cirurgias periapicais</span></div>
-<div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:44px;letter-spacing:-.02em;line-height:1;color:#A77253">08</span><span style="font-size:28px;line-height:1.3">Avaliação e planejamento de casos complexos</span></div>
-</div>
-</div>
-<div style="position:absolute;left:80px;right:80px;bottom:84px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px"><div style="font-family:Lora,serif;font-style:italic;font-size:50px;line-height:1.18;max-width:760px">Precisão técnica, planejamento individualizado e foco na preservação dentária.</div><img src="assets/logo/simbolo-escuro.png" style="height:52px;display:block;flex:none"></div>
-</div>
-</div>
-<figcaption style="font:500 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">02 · Soluções</figcaption>
-</figure>
-
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px">
-<div style="width:378px;height:672px;overflow:hidden;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.14)">
-<div style="width:1080px;height:1920px;transform:scale(.35);transform-origin:0 0;position:relative;overflow:hidden;background:#615F6D;color:#F2E6D8;font-family:'Host Grotesk',sans-serif">
-<div style="position:absolute;left:80px;right:80px;top:76px;display:flex;justify-content:space-between;font-size:22px;font-weight:700;letter-spacing:.3em;text-transform:uppercase"><span>Endodelivery</span><span>04 / 11</span></div>
-<div style="position:absolute;left:80px;top:160px;display:flex;align-items:baseline;gap:26px"><span style="font-weight:800;font-size:132px;letter-spacing:-.04em;line-height:1">CASOS</span><span style="font-family:Lora,serif;font-style:italic;font-size:112px;line-height:1">clínicos</span></div>
-<div style="position:absolute;left:80px;right:80px;top:350px;bottom:80px;display:flex;flex-direction:column;justify-content:space-between">
-<div style="display:grid;grid-template-columns:300px 1fr;gap:36px;align-items:center;padding-top:24px;border-top:2px solid #F2E6D8"><div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:60px;letter-spacing:-.03em;line-height:1">01</span><span style="font-weight:600;font-size:30px;line-height:1.15">Radix Entomolaris</span><span style="font-size:24px;line-height:1.38">Sempre respeitando a variação anatômica de cada paciente.</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div style="position:relative;height:205px;border:3px solid #F2E6D8;overflow:hidden"><img src="assets/rx/radix-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:0;top:0;background:#F2E6D8;color:#252420;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px">Antes</span></div><div style="position:relative;height:205px;border:3px solid #F2E6D8;overflow:hidden"><img src="assets/rx/radix-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:0;top:0;background:#A77253;color:#252420;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px">Depois</span></div></div></div>
-<div style="display:grid;grid-template-columns:300px 1fr;gap:36px;align-items:center;padding-top:24px;border-top:2px solid #F2E6D8"><div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:60px;letter-spacing:-.03em;line-height:1">02</span><span style="font-weight:600;font-size:30px;line-height:1.15">Reparo ósseo</span><span style="font-size:24px;line-height:1.38">Sempre proservando os casos para acompanhamento de sucesso.</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div style="position:relative;height:205px;border:3px solid #F2E6D8;overflow:hidden"><img src="assets/rx/reparo-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:0;top:0;background:#F2E6D8;color:#252420;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px">Antes</span></div><div style="position:relative;height:205px;border:3px solid #F2E6D8;overflow:hidden"><img src="assets/rx/reparo-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:0;top:0;background:#A77253;color:#252420;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px">Depois</span></div></div></div>
-<div style="display:grid;grid-template-columns:300px 1fr;gap:36px;align-items:center;padding-top:24px;border-top:2px solid #F2E6D8"><div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:60px;letter-spacing:-.03em;line-height:1">03</span><span style="font-weight:600;font-size:30px;line-height:1.15">Sessão única</span><span style="font-size:24px;line-height:1.38">Casos com planejamento respeitando a necessidade de cada paciente.</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div style="position:relative;height:205px;border:3px solid #F2E6D8;overflow:hidden"><img src="assets/rx/sessao-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:0;top:0;background:#F2E6D8;color:#252420;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px">Antes</span></div><div style="position:relative;height:205px;border:3px solid #F2E6D8;overflow:hidden"><img src="assets/rx/sessao-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:0;top:0;background:#A77253;color:#252420;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px">Depois</span></div></div></div>
-<div style="display:grid;grid-template-columns:300px 1fr;gap:36px;align-items:center;padding-top:24px;border-top:2px solid #F2E6D8"><div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:60px;letter-spacing:-.03em;line-height:1">04</span><span style="font-weight:600;font-size:30px;line-height:1.15">Blindagem das embocaduras dos canais</span><span style="font-size:24px;line-height:1.38">Segurança contra futuras reinfecções.</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div style="position:relative;height:205px;border:3px solid #F2E6D8;overflow:hidden"><img src="assets/rx/blindagem-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:0;top:0;background:#F2E6D8;color:#252420;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px">Antes</span></div><div style="position:relative;height:205px;border:3px solid #F2E6D8;overflow:hidden"><img src="assets/rx/blindagem-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:0;top:0;background:#A77253;color:#252420;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px">Depois</span></div></div></div>
-<div style="display:grid;grid-template-columns:300px 1fr;gap:36px;align-items:center;padding-top:24px;border-top:2px solid #F2E6D8"><div style="display:flex;flex-direction:column;gap:8px"><span style="font-weight:800;font-size:60px;letter-spacing:-.03em;line-height:1">05</span><span style="font-weight:600;font-size:30px;line-height:1.15">Planejamento de casos complexos</span><span style="font-size:24px;line-height:1.38">Traz a segurança e precisão da execução dos casos.</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div style="position:relative;height:205px;border:3px solid #F2E6D8;overflow:hidden"><img src="assets/rx/complexo-antes.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:0;top:0;background:#F2E6D8;color:#252420;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px">Antes</span></div><div style="position:relative;height:205px;border:3px solid #F2E6D8;overflow:hidden"><img src="assets/rx/complexo-depois.jpg" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:0;top:0;background:#A77253;color:#252420;font-size:15px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:6px 12px">Depois</span></div></div></div>
-</div>
-</div>
-</div>
-<figcaption style="font:500 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">04 · Casos clínicos</figcaption>
-</figure>
-
-<figure style="margin:0;display:flex;flex-direction:column;gap:8px">
-<div style="width:378px;height:672px;overflow:hidden;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.14)">
-<div style="width:1080px;height:1920px;transform:scale(.35);transform-origin:0 0;position:relative;overflow:hidden;background:#F2E6D8;color:#252420;font-family:'Host Grotesk',sans-serif">
-<div style="position:absolute;left:80px;right:80px;top:76px;display:flex;justify-content:space-between;font-size:22px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#5A4A3B"><span>Endodelivery</span><span>10 / 11</span></div>
-<div style="position:absolute;left:72px;top:150px;font-weight:800;font-size:250px;letter-spacing:-.05em;line-height:.82">SOBRE</div>
-<div style="position:absolute;left:80px;top:380px;font-family:Lora,serif;font-style:italic;font-size:230px;line-height:1;color:#A77253">mim</div>
-<img src="assets/fotos/PJF_2485.jpg" style="position:absolute;left:560px;top:400px;width:440px;height:600px;object-fit:cover;object-position:50% 30%;display:block">
-<div style="position:absolute;left:80px;top:720px;width:420px;display:flex;flex-direction:column;gap:10px"><span style="font-family:Lora,serif;font-style:italic;font-size:44px;line-height:1.1">Dr. Gabriel Germano</span><span style="font-size:20px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#5A4A3B;line-height:1.6">Cirurgião-dentista · Endodontista</span></div>
-<div style="position:absolute;left:80px;right:80px;top:1060px;column-count:2;column-gap:56px;font-size:27px;line-height:1.46">
-<p style="margin:0 0 20px">Sou cirurgião-dentista com atuação direcionada à Endodontia, pautada pela precisão técnica, pelo planejamento individualizado e pelo uso da tecnologia como aliada da prática clínica.</p>
-<p style="margin:0 0 20px">Sou graduado pela Universidade de Ribeirão Preto e especialista em Endodontia pela Faculdade de Odontologia de Ribeirão Preto da Universidade de São Paulo (FORP-USP). Mantenho o compromisso com o aperfeiçoamento técnico e a atualização científica, buscando uma atuação fundamentada em evidências.</p>
-<p style="margin:0 0 20px">Acredito que preservar dentes naturais vai além de tratar canais: significa contribuir para a saúde bucal e para a continuidade de reabilitações odontológicas.</p>
-<p style="margin:0">Meu trabalho une rigor técnico e atenção ao paciente, valorizando o conforto durante o atendimento, a comunicação clara e a construção de relações de confiança com pacientes e dentistas parceiros.</p>
-</div>
-<div style="position:absolute;left:0;right:0;bottom:0;height:150px;background:#5A4A3B;color:#F2E6D8;display:flex;align-items:center;justify-content:space-between;padding:0 80px"><span style="font-size:20px;font-weight:600;letter-spacing:.2em;text-transform:uppercase">CRO-MG 62.727 · CRO-SP 148.553 · EPAO 15.429</span><img src="assets/logo/simbolo-bege.png" style="height:48px;display:block"></div>
-</div>
-</div>
-<figcaption style="font:500 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">10 · Sobre mim</figcaption>
-</figure>
-
-</div>
-</div>
-
-</div>
-<p class="dv-next">Você pode pedir, por exemplo: "seguir <a class="dv-oid" href="#1b">1b</a> com a lista de soluções de <a class="dv-oid" href="#1c">1c</a>", "<a class="dv-oid" href="#1a">1a</a> com a capa escura de <a class="dv-oid" href="#1b">1b</a>" ou "ver as 11 telas em <a class="dv-oid" href="#1c">1c</a>".</p>
+<section class="hero escuro">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Endodelivery · Para clínicas parceiras</p>
+      <h1>Endodontia<br><em>especializada.</em><br>Na sua clínica.</h1>
+      <p class="lead">Excelência clínica e praticidade para dentistas que valorizam uma parceria de confiança. Eu vou até o seu consultório, com a estrutura completa, e o paciente continua sendo seu.</p>
+      <div class="hero-acoes">
+        <a class="btn btn-cobre" href="#contato">Quero ser parceiro</a>
+        <a class="btn btn-linha" href="#parceria">Como funciona</a>
+      </div>
+    </div>
+    <div class="hero-foto">
+      <img src="img/PJF_2780.webp" alt="Dr. Gabriel Germano, endodontista, de braços cruzados" width="934" height="1400" fetchpriority="high">
+      <div class="credencial"><strong>Dr. Gabriel Germano</strong>Especialista em Endodontia · FORP-USP<br>CRO-MG 62.727 · CRO-SP 148.553</div>
+    </div>
+  </div>
+  <div class="hero-rodape"><div class="wrap"><span>Endodontia ao seu alcance</span><span>Tecnologia, precisão e cuidado em cada tratamento</span></div></div>
 </section>
-</x-dc>
+
+<section class="numeros" aria-label="Números">
+  <div class="wrap">
+    <div class="num"><small>Mais de</small><b>5</b><span>anos de experiência em endodontia</span></div>
+    <div class="num"><small>Mais de</small><b>20</b><span>dentistas parceiros indicando</span></div>
+    <div class="num"><small>Mais de</small><b>1.500</b><span>tratamentos realizados</span></div>
+  </div>
+</section>
+
+<section class="sec bege" id="solucoes">
+  <div class="wrap duas">
+    <div class="rev">
+      <p class="eyebrow">Soluções em endodontia</p>
+      <h2>Sua clínica.<br><em>Mais uma solução especializada.</em></h2>
+      <p class="lead" style="margin-top:24px">Conte com um parceiro dedicado à endodontia para atender às necessidades dos seus pacientes, diretamente na sua clínica.</p>
+      <p class="frase">Precisão técnica, planejamento individualizado e foco na preservação dentária.</p>
+    </div>
+    <ul class="lista-servicos rev">
+      <li>Urgências endodônticas</li>
+      <li>Capeamento pulpar</li>
+      <li>Tratamentos endodônticos em dentes permanentes</li>
+      <li>Retratamentos endodônticos</li>
+      <li>Instalação de retentores intrarradiculares</li>
+      <li>Restaurações definitivas após endodontia</li>
+      <li>Cirurgias periapicais</li>
+      <li>Avaliação e planejamento de casos complexos</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="estrutura">
+  <div class="wrap">
+    <div class="rev" style="max-width:760px">
+      <p class="eyebrow">Estrutura completa</p>
+      <h2>Tudo o que o caso pede. <em>Na sua clínica.</em></h2>
+      <p class="lead" style="margin-top:24px">Levo os equipamentos necessários para a realização dos procedimentos endodônticos, integrando tecnologia e organização à estrutura do consultório parceiro.</p>
+    </div>
+    <div class="equip rev">
+      <figure><img src="img/equip/motor-endodontico.webp" alt="" loading="lazy" width="240" height="240"><figcaption>Motor endodôntico</figcaption></figure>
+      <figure><img src="img/equip/localizador-foraminal.webp" alt="" loading="lazy" width="210" height="210"><figcaption>Localizador foraminal</figcaption></figure>
+      <figure><img src="img/equip/ultrassom.webp" alt="" loading="lazy" width="300" height="300"><figcaption>Ultrassom</figcaption></figure>
+      <figure><img src="img/equip/sensor-rx.webp" alt="" loading="lazy" width="600" height="700"><figcaption>Sensor digital de RX</figcaption></figure>
+      <figure><img src="img/equip/rx-portatil.webp" alt="" loading="lazy" width="243" height="243"><figcaption>RX portátil</figcaption></figure>
+      <figure><img src="img/equip/magnificacao.webp" alt="" loading="lazy" width="400" height="400"><figcaption>Magnificação</figcaption></figure>
+      <figure><img src="img/equip/materiais-consumo.webp" alt="" loading="lazy" width="275" height="275"><figcaption>Materiais de consumo</figcaption></figure>
+      <figure><img src="img/equip/documentacao.webp" alt="" loading="lazy" width="141" height="200"><figcaption>Documentação</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec escuro" id="casos">
+  <div class="wrap">
+    <div class="rev" style="max-width:760px">
+      <p class="eyebrow">Casos clínicos</p>
+      <h2>Resultados que <em>falam pelo cuidado.</em></h2>
+      <p class="lead" style="margin-top:24px">Radiografias de casos realizados, do diagnóstico à obturação final.</p>
+    </div>
+    <div class="casos">
+      <article class="caso rev">
+        <div class="par">
+          <figure><img src="img/casos/radix-antes.webp" alt="Radiografia antes do tratamento: molar com raiz extra (radix entomolaris)" width="266" height="236" loading="lazy"><span class="tag">Antes</span></figure>
+          <figure><img src="img/casos/radix-depois.webp" alt="Radiografia depois do tratamento, com os canais obturados" width="380" height="273" loading="lazy"><span class="tag depois">Depois</span></figure>
+        </div>
+        <div><span class="n">01</span><h3>Radix entomolaris</h3><p>Sempre respeitando a variação anatômica de cada paciente.</p></div>
+      </article>
+      <article class="caso rev">
+        <div class="par">
+          <figure><img src="img/casos/reparo-antes.webp" alt="Radiografia antes: lesão óssea na região da raiz" width="237" height="322" loading="lazy"><span class="tag">Antes</span></figure>
+          <figure><img src="img/casos/reparo-depois.webp" alt="Radiografia de acompanhamento mostrando reparo ósseo" width="260" height="344" loading="lazy"><span class="tag depois">Depois</span></figure>
+        </div>
+        <div><span class="n">02</span><h3>Reparo ósseo</h3><p>Sempre proservando os casos para acompanhamento de sucesso.</p></div>
+      </article>
+      <article class="caso rev">
+        <div class="par">
+          <figure><img src="img/casos/sessao-antes.webp" alt="Radiografia antes do tratamento em sessão única" width="379" height="273" loading="lazy"><span class="tag">Antes</span></figure>
+          <figure><img src="img/casos/sessao-depois.webp" alt="Radiografia depois do tratamento em sessão única" width="379" height="273" loading="lazy"><span class="tag depois">Depois</span></figure>
+        </div>
+        <div><span class="n">03</span><h3>Sessão única</h3><p>Casos com planejamento respeitando a necessidade de cada paciente.</p></div>
+      </article>
+      <article class="caso rev">
+        <div class="par">
+          <figure><img src="img/casos/blindagem-antes.webp" alt="Radiografia antes da blindagem das embocaduras" width="379" height="273" loading="lazy"><span class="tag">Antes</span></figure>
+          <figure><img src="img/casos/blindagem-depois.webp" alt="Radiografia depois, com as embocaduras dos canais protegidas" width="379" height="273" loading="lazy"><span class="tag depois">Depois</span></figure>
+        </div>
+        <div><span class="n">04</span><h3>Blindagem das embocaduras dos canais</h3><p>Segurança contra futuras reinfecções.</p></div>
+      </article>
+      <article class="caso rev">
+        <div class="par">
+          <figure><img src="img/casos/complexo-antes.webp" alt="Radiografia antes de um caso complexo" width="379" height="273" loading="lazy"><span class="tag">Antes</span></figure>
+          <figure><img src="img/casos/complexo-depois.webp" alt="Radiografia depois do caso complexo concluído" width="379" height="273" loading="lazy"><span class="tag depois">Depois</span></figure>
+        </div>
+        <div><span class="n">05</span><h3>Planejamento de casos complexos</h3><p>Traz segurança e precisão na execução dos casos.</p></div>
+      </article>
+    </div>
+
+    <div class="mais-casos rev">
+      <h3>Mais casos</h3>
+      <p>Antes e depois de outros tratamentos e retratamentos.</p>
+      <div class="trilho" tabindex="0" aria-label="Galeria de antes e depois">
+        <div class="par"><figure><img src="img/casos/p06_1.webp" alt="Radiografia antes do tratamento" width="316" height="241" loading="lazy"><span class="tag">Antes</span></figure><figure><img src="img/casos/p06_2.webp" alt="Radiografia depois do tratamento" width="326" height="245" loading="lazy"><span class="tag depois">Depois</span></figure></div>
+        <div class="par"><figure><img src="img/casos/p06_3.webp" alt="Radiografia antes do tratamento" width="380" height="273" loading="lazy"><span class="tag">Antes</span></figure><figure><img src="img/casos/p06_4.webp" alt="Radiografia depois do tratamento" width="380" height="273" loading="lazy"><span class="tag depois">Depois</span></figure></div>
+        <div class="par"><figure><img src="img/casos/p06_5.webp" alt="Radiografia antes do tratamento" width="379" height="273" loading="lazy"><span class="tag">Antes</span></figure><figure><img src="img/casos/p06_6.webp" alt="Radiografia depois do tratamento" width="379" height="273" loading="lazy"><span class="tag depois">Depois</span></figure></div>
+        <div class="par"><figure><img src="img/casos/p06_7.webp" alt="Radiografia antes do tratamento" width="380" height="273" loading="lazy"><span class="tag">Antes</span></figure><figure><img src="img/casos/p06_8.webp" alt="Radiografia depois do tratamento" width="380" height="273" loading="lazy"><span class="tag depois">Depois</span></figure></div>
+        <div class="par"><figure><img src="img/casos/p06_9.webp" alt="Radiografia antes do tratamento" width="360" height="495" loading="lazy"><span class="tag">Antes</span></figure><figure><img src="img/casos/p06_10.webp" alt="Radiografia depois do tratamento" width="274" height="379" loading="lazy"><span class="tag depois">Depois</span></figure></div>
+        <div class="par"><figure><img src="img/casos/p06_11.webp" alt="Radiografia antes do tratamento" width="379" height="273" loading="lazy"><span class="tag">Antes</span></figure><figure><img src="img/casos/p06_12.webp" alt="Radiografia depois do tratamento" width="379" height="273" loading="lazy"><span class="tag depois">Depois</span></figure></div>
+        <div class="par"><figure><img src="img/casos/p08_1.webp" alt="Radiografia antes do tratamento" width="352" height="266" loading="lazy"><span class="tag">Antes</span></figure><figure><img src="img/casos/p08_2.webp" alt="Radiografia depois do tratamento" width="474" height="341" loading="lazy"><span class="tag depois">Depois</span></figure></div>
+        <div class="par"><figure><img src="img/casos/p08_3.webp" alt="Radiografia antes do tratamento" width="380" height="273" loading="lazy"><span class="tag">Antes</span></figure><figure><img src="img/casos/p08_4.webp" alt="Radiografia depois do tratamento" width="380" height="273" loading="lazy"><span class="tag depois">Depois</span></figure></div>
+        <div class="par"><figure><img src="img/casos/p08_5.webp" alt="Radiografia antes do tratamento" width="380" height="273" loading="lazy"><span class="tag">Antes</span></figure><figure><img src="img/casos/p08_6.webp" alt="Radiografia depois do tratamento" width="380" height="273" loading="lazy"><span class="tag depois">Depois</span></figure></div>
+        <div class="par"><figure><img src="img/casos/p08_7.webp" alt="Radiografia antes do tratamento" width="379" height="273" loading="lazy"><span class="tag">Antes</span></figure><figure><img src="img/casos/p08_8.webp" alt="Radiografia depois do tratamento" width="379" height="273" loading="lazy"><span class="tag depois">Depois</span></figure></div>
+        <div class="par"><figure><img src="img/casos/p08_9.webp" alt="Radiografia antes do tratamento" width="380" height="273" loading="lazy"><span class="tag">Antes</span></figure><figure><img src="img/casos/p08_10.webp" alt="Radiografia depois do tratamento" width="380" height="273" loading="lazy"><span class="tag depois">Depois</span></figure></div>
+      </div>
+      <p class="trilho-dica">Arraste para o lado para ver mais.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec azul" id="detalhes">
+  <div class="wrap">
+    <div class="rev" style="max-width:760px">
+      <p class="eyebrow" style="color:var(--bege)">Diferenciais</p>
+      <h2>Os detalhes que <em>fazem a diferença.</em></h2>
+    </div>
+    <div class="detalhes rev">
+      <div class="detalhe"><h3>Controle da dor e conforto</h3><p>Técnicas criteriosas e atenção ao paciente para proporcionar uma experiência de atendimento mais confortável.</p></div>
+      <div class="detalhe"><h3>Atendimento individualizado</h3><p>Cada paciente é único. A conduta clínica considera suas necessidades e as particularidades de cada caso.</p></div>
+      <div class="detalhe"><h3>Planejamento e comunicação</h3><p>Planejamento detalhado e explicações claras para que o paciente compreenda o diagnóstico, a causa do problema e as possibilidades de tratamento.</p></div>
+      <div class="detalhe"><h3>Precisão e magnificação</h3><p>O uso da magnificação auxilia na visualização de detalhes anatômicos e na condução de casos complexos, favorecendo uma abordagem clínica mais precisa.</p></div>
+    </div>
+    <div class="clark rev">
+      <div><h3>Técnica de Clark</h3><p>Técnicas de reposicionamento radiográfico para conferência de todos os canais que estavam sobrepostos.</p></div>
+      <div class="fotos">
+        <img src="img/casos/p05_1.webp" alt="Radiografia em posição ortorradial" width="379" height="273" loading="lazy">
+        <img src="img/casos/p05_2.webp" alt="Radiografia com incidência deslocada, separando os canais" width="379" height="273" loading="lazy">
+        <img src="img/casos/p05_3.webp" alt="Radiografia final conferindo todos os canais" width="379" height="273" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec bege" id="parceria">
+  <div class="wrap duas">
+    <div class="foto-retrato rev"><img src="img/PJF_2485.webp" alt="Dr. Gabriel Germano sorrindo, sentado à mesa do consultório" loading="lazy" width="934" height="1400"></div>
+    <div class="rev">
+      <p class="eyebrow">Como funciona a parceria</p>
+      <h2>Simples, transparente <em>e integrada à sua rotina.</em></h2>
+      <ol class="passos">
+        <li><h3>Avaliação e contato</h3><p>O dentista parceiro realiza a avaliação inicial e conta com minha disponibilidade para esclarecer dúvidas e discutir o caso.</p></li>
+        <li><h3>Agendamento ágil</h3><p>Organizo o atendimento o mais breve possível, com tempo médio de espera de até um dia, conforme a agenda.</p></li>
+        <li><h3>Atendimento endodôntico</h3><p>Realizo a avaliação clínica, solicito os exames complementares necessários, alinho o plano de tratamento com você quando indicado e executo a etapa endodôntica.</p></li>
+        <li><h3>Acompanhamento e relatório</h3><p>Acompanho o pós-operatório diretamente com o paciente e envio a você um relatório detalhado do procedimento realizado.</p></li>
+        <li><h3>Continuidade do tratamento</h3><p>Após a etapa endodôntica, o paciente retorna à sua clínica para dar continuidade ao plano de tratamento.</p></li>
+      </ol>
+      <p class="frase">Uma parceria que valoriza seu paciente e respeita o seu trabalho.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="encaminhar">
+  <div class="wrap encaminhar">
+    <div class="rev">
+      <p class="eyebrow">Para encaminhar um paciente</p>
+      <h2>O que eu preciso <em>para me preparar.</em></h2>
+      <ul class="checklist">
+        <li>Ficha de encaminhamento endodôntico preenchida</li>
+        <li>Radiografia periapical e, quando indicada, tomografia</li>
+        <li>Disponibilidade de dias e horários do paciente</li>
+        <li>Informações clínicas relevantes para o atendimento</li>
+      </ul>
+      <div class="info">
+        <div><b>2 h</b><span>de consulta para molares</span></div>
+        <div><b>1h30</b><span>para anteriores, pré-molares e avaliações</span></div>
+        <div><b>8 h</b><span>de antecedência para confirmar a presença do paciente</span></div>
+        <div><b>7 dias</b><span>de acompanhamento pós-operatório com o paciente</span></div>
+      </div>
+      <a class="btn btn-escuro" href="docs/ficha-de-encaminhamento.pdf" download>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+        Baixar a ficha de encaminhamento
+      </a>
+    </div>
+    <div class="faq rev">
+      <details><summary>Como funcionam as urgências?</summary><div class="resp"><p>Os atendimentos de urgência são destinados aos pacientes com dor, edema ou outras manifestações que pedem avaliação e intervenção em tempo oportuno.</p><p>A conduta é definida pelo diagnóstico e pelas condições clínicas, buscando controlar os sintomas e tratar a causa sempre que possível. Quando o tratamento definitivo não puder ser feito naquele momento, pode ser indicada uma abordagem provisória.</p></div></details>
+      <details><summary>Quando a tomografia é pedida?</summary><div class="resp"><p>Em casos de maior complexidade, como variações anatômicas relevantes, suspeita de trinca ou fratura radicular, lesões endoperiodontais e retratamentos que exigem investigação adicional.</p><p>A solicitação é individualizada, considerando o quanto o exame contribui para o planejamento, o prognóstico e a decisão clínica.</p></div></details>
+      <details><summary>Como recebo o relatório de cada caso?</summary><div class="resp"><p>Ao final de cada procedimento, envio um relatório com as informações clínicas, a descrição do tratamento realizado e as orientações para a continuidade do cuidado, pelo WhatsApp ou no sistema digital da clínica.</p><p>Também podemos criar um grupo de WhatsApp com você e sua secretária para organizar agendamentos e discutir casos.</p></div></details>
+      <details><summary>E se o paciente faltar?</summary><div class="resp"><p>Como o atendimento envolve deslocamento e preparo da estrutura, peço a confirmação com pelo menos 8 horas de antecedência. Em caso de falta após a confirmação, pode ser aplicada uma taxa de deslocamento, conforme a política combinada antes do início dos atendimentos.</p></div></details>
+      <details><summary>E se surgir uma intercorrência?</summary><div class="resp"><p>Mesmo com planejamento criterioso, alguns casos podem exigir recursos adicionais, como a remoção de um instrumento fraturado. Nessas situações conversamos sobre as alternativas e a melhor conduta para o paciente, e qualquer custo adicional é combinado antes, com transparência.</p></div></details>
+      <details><summary>Como ficam os acertos e o contrato?</summary><div class="resp"><p>Os valores e prazos de cada atendimento são definidos previamente entre nós, e a cobrança dos honorários é feita diretamente com o dentista parceiro, nunca com o paciente.</p><p>A parceria é formalizada em um contrato de prestação de serviços, com as condições de atendimento e as responsabilidades de cada profissional.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec escuro" id="depoimentos">
+  <div class="wrap">
+    <div class="rev" style="max-width:760px">
+      <p class="eyebrow">Depoimentos</p>
+      <h2>O que dizem <em>os dentistas parceiros.</em></h2>
+    </div>
+    <div class="depo">
+      <figure class="rev"><blockquote>“É um profissional extremamente dedicado, criterioso e comprometido com a qualidade dos procedimentos. Demonstra segurança na condução dos casos, atenção aos detalhes e muito cuidado na busca pelas melhores soluções para cada paciente.”</blockquote><figcaption>Dra. Gabriela Bueno · CRO 56132</figcaption></figure>
+      <figure class="rev"><blockquote>“Trabalhar com ele transmite confiança e tranquilidade. É um profissional responsável, ético e cuidadoso, que leva cada caso a sério e demonstra compromisso tanto com o resultado do tratamento quanto com o bem-estar do paciente.”</blockquote><figcaption>Dra. Christiane Reis · CRO 67089</figcaption></figure>
+      <figure class="rev"><blockquote>“Um dos seus grandes diferenciais é a organização e o profissionalismo. Conduz os atendimentos com planejamento, pontualidade e atenção aos protocolos, tornando a parceria mais eficiente e contribuindo para uma rotina clínica bem estruturada.”</blockquote><figcaption>Dra. Syzila Hadad · CRO 38438</figcaption></figure>
+      <figure class="rev"><blockquote>“Além da competência técnica, destaco sua facilidade de comunicação e disposição para trabalhar em conjunto. É acessível, transparente nas discussões clínicas e cuidadoso ao alinhar as condutas, o que fortalece a confiança entre os profissionais.”</blockquote><figcaption>Dra. Milena Maia · CRO 58500</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="sobre">
+  <div class="wrap">
+    <div class="sobre-foto rev"><img src="img/PJF_2557.webp" alt="Dr. Gabriel Germano no consultório, ao lado do notebook" loading="lazy" width="1400" height="934"></div>
+    <div class="duas">
+      <div class="rev">
+        <p class="eyebrow">Sobre mim</p>
+        <h2>Preservar dentes naturais <em>vai além de tratar canais.</em></h2>
+      </div>
+      <div class="sobre-texto rev">
+        <p class="lead">Sou cirurgião-dentista com atuação direcionada à Endodontia, pautada pela precisão técnica, pelo planejamento individualizado e pelo uso da tecnologia como aliada da prática clínica.</p>
+        <p>Mantenho o compromisso com o aperfeiçoamento técnico e a atualização científica, buscando uma atuação fundamentada em evidências. Preservar dentes naturais significa contribuir para a saúde bucal e para a continuidade de reabilitações odontológicas.</p>
+        <p>Meu trabalho une rigor técnico e atenção ao paciente, valorizando o conforto durante o atendimento, a comunicação clara e a construção de relações de confiança com pacientes e dentistas parceiros.</p>
+        <dl class="formacao">
+          <div><dt>Graduação</dt><dd>Universidade de Ribeirão Preto</dd></div>
+          <div><dt>Especialização</dt><dd>Endodontia · Faculdade de Odontologia de Ribeirão Preto da USP (FORP-USP)</dd></div>
+          <div><dt>Registros</dt><dd>CRO-MG 62.727 · CRO-SP 148.553 · EPAO 15.429</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec escuro contato" id="contato">
+  <div class="wrap">
+    <div class="rev">
+      <p class="eyebrow">Contato</p>
+      <h2>Vamos trabalhar <em>juntos?</em></h2>
+      <p class="sub">Sua clínica. Seu paciente. Nossa parceria em Endodontia.</p>
+      <p class="lead">Leve a Endodontia especializada até sua clínica, com praticidade, precisão técnica e comunicação profissional. Entre em contato para conhecer o modelo de atendimento e alinharmos as condições da parceria.</p>
+      <div class="canais">
+        <a class="canal" href="https://wa.me/5535998462695?text=Ol%C3%A1%2C%20Dr.%20Gabriel!%20Quero%20conhecer%20a%20parceria%20em%20endodontia." target="_blank" rel="noopener"><small>WhatsApp</small><span>(35) 99846-2695</span></a>
+        <a class="canal" href="https://www.instagram.com/drgabrielgermano/" target="_blank" rel="noopener"><small>Instagram</small><span>@drgabrielgermano</span></a>
+        <a class="canal largo" href="mailto:gabrielgermanoendodontia@gmail.com"><small>E-mail</small><span>gabrielgermanoendodontia@gmail.com</span></a>
+        <div class="canal largo"><small>Endereço</small><span>Rua José Leonel Vilela, 67 – Centro, Alpinópolis/MG</span></div>
+      </div>
+    </div>
+    <div class="contato-foto rev"><img src="img/PJF_2751.webp" alt="Retrato do Dr. Gabriel Germano sorrindo" loading="lazy" width="934" height="1400"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <img src="img/simbolo-bege.webp" alt="" width="300" height="152">
+    <div><strong>Gabriel Germano Gonçalves</strong> · Responsável Técnico · Cirurgião-dentista, Endodontista<br>CRO-MG 62.727 · CRO-SP 148.553 · EPAO 15.429</div>
+  </div>
+</footer>
+
+<a class="zap" href="https://wa.me/5535998462695?text=Ol%C3%A1%2C%20Dr.%20Gabriel!%20Quero%20conhecer%20a%20parceria%20em%20endodontia." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3Z"/></svg>
+</a>
+
+<script>
+document.documentElement.classList.add('js');
+var io='IntersectionObserver' in window && new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rev').forEach(function(el){io?io.observe(el):el.classList.add('in')});
+document.querySelectorAll('.menu nav a').forEach(function(a){a.addEventListener('click',function(){a.closest('details').open=false})});
+</script>
 </body>
 </html>
